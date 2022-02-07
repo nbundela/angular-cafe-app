@@ -1,0 +1,115 @@
+<div class="container background" *ngIf="cartItems.length > 0">
+    <div class="row border">
+        <div class="col">
+          Item Name
+        </div>
+        <div class="col">
+          Item Image
+        </div>
+        <div class="col">
+          Price
+        </div>
+        <div class="col">
+          Discount
+        </div>
+        <div class="col">
+          Discounted Price
+        </div>
+        <div class="col">
+         Tax
+        </div>
+        <div class="col">
+          Price after Tax
+        </div>
+        <div class="col">
+            
+        </div>
+      </div>
+    <div *ngFor="let item of cartItems;let i =index">
+        <div class="row border">
+                <div class="col" *ngIf="item.combo">
+                    <b>{{item.product_id}}</b>
+                </div>
+        </div>
+        <div class="row row-cols-8">
+            <div class="col col-space">
+              {{item.product1_name}}
+            </div>
+            <div class="col img-space">
+                <Img src="{{item.product1_image}}"  width="100" height="100"/>
+            </div>
+            <div class="col col-space">
+                {{item.product1_price}}
+            </div>
+            <div class="col col-space">
+                {{item.product2_discount}}
+            </div>
+            <div class="col col-space">
+             {{item.product1_discountVal}}
+            </div>
+            <div class="col col-space">
+                {{item.product1_tax}}
+            </div>
+            <div class="col col-space">
+                {{item.product1_valAfterTax}}
+            </div>
+            <div class="col col-space">
+    <button type="button" class="btn-close text-reset" aria-label="Close" (click)="removeFromCart(i)"></button>
+            </div>
+          </div>
+          <div class="row row-cols-8" *ngIf="item.combo">
+            <div class="col col-space">
+              {{item.product2_name}}
+            </div>
+            <div class="col img-space">
+                <Img src="{{item.product2_image}}"  width="100" height="100"/>
+            </div>
+            <div class="col col-space">
+                {{item.product2_price}}
+            </div>
+            <div class="col col-space">
+                {{item.product2_discount}}
+            </div>
+            <div class="col col-space">
+             {{item.product2_discountVal}}
+            </div>
+            <div class="col col-space">
+                {{item.product2_tax}}
+            </div>
+            <div class="col col-space">
+              {{item.product2_valAfterTax}}
+            </div>
+            <div class="col col-space">
+              <!-- Remove -->
+            </div>
+          </div>
+    </div>
+    <div class="row border">
+      <div class="col-7"></div>
+      <div class="col-2 align">Total</div>
+      <div class="col-2 total">{{total.toFixed(2)}}</div>
+      <div>
+        
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
+  <div class="btn-grp" *ngIf="cartItems.length > 0">
+    <button type="button" class="btn btn-secondary" (click)="reset()">Reset cart</button>
+    <button type="button" class="btn btn-danger space" (click)="checkout()">Checkout</button>
+  </div>
+
+  <div *ngIf="cartItems.length === 0 && !success && !show">
+    <h3>No items in cart</h3>
+  </div>
+
+  <div class="d-flex justify-content-center" *ngIf="show">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <div class="alert alert-success" role="alert" *ngIf="success">
+    You have checked out the items succefully.
+  </div>

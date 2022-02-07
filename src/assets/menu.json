@@ -1,0 +1,92 @@
+[
+    {
+        "product_id": "1000",
+        "category_name" : "coffee",
+        "product_name": "Cappuccino",
+        "price" : 320,
+        "tax": 18,
+        "image":"http://localhost:4200/assets/images/cappuccino.jpeg",
+        "discount":8,
+        "offer":"8% discount on products"
+    },
+    {
+        "product_id": "1020",
+        "category_name" : "coffee",
+        "product_name": "Mocha",
+        "price" : 340,
+        "tax": 18,
+        "image":"http://localhost:4200/assets/images/mocha.jpeg",
+        "discount":5,
+        "offer":"5% discount on products"
+    },
+    {
+        "product_id": "1034",
+        "category_name" : "coffee",
+        "product_name": "Hot Chocolate",
+        "price" : 310,
+        "tax": 18,
+        "image":"http://localhost:4200/assets/images/hot-choc.jpeg",
+        "discount":3,
+        "offer":"3% discount on products"
+    },
+    {
+        "product_id": "2004",
+        "category_name" : "sandwitch",
+        "product_name": "Veg supreme",
+        "price" : 227,
+        "tax": 12,
+        "image":"http://localhost:4200/assets/images/veg-sand.jpeg",
+        "discount":8,
+        "offer":"8% discount on products"
+    },
+    {
+        "product_id": "2104",
+        "category_name" : "sandwitch",
+        "product_name": "Cheese chilli toast",
+        "price" : 250,
+        "tax": 12,
+        "image":"http://localhost:4200/assets/images/chilli.jpeg",
+        "discount":5,
+        "offer":"5% discount on products"
+    },
+    {
+        "product_id": "2044",
+        "category_name" : "sandwitch",
+        "product_name": "Hawaiian classic",
+        "price" : 320,
+        "tax": 12,
+        "image":"http://localhost:4200/assets/images/hawaiian.jpeg",
+        "discount":3,
+        "offer":"3% discount on products"
+    },
+    {
+        "product_id": "3456",
+        "category_name" : "cookies",
+        "product_name": "Butter Cookie",
+        "price" : 110,
+        "tax": 8,
+        "image":"http://localhost:4200/assets/images/butter.jpeg",
+        "discount": "free",
+        "offer":"free product available"
+    },
+    {
+        "product_id": "3007",
+        "category_name" : "cookies",
+        "product_name": "Almond Cookie",
+        "price" : 130,
+        "tax": 8,
+        "image":"http://localhost:4200/assets/images/almond.jpeg",
+        "discount": "free",
+        "offer":"free product available"
+    },
+    {
+        "product_id": "3100",
+        "category_name" : "cookies",
+        "product_name": "Choco Cookie",
+        "price" : 125,
+        "tax": 8,
+        "image":"http://localhost:4200/assets/images/choco.jpeg",
+        "discount": "free",
+        "offer":"free product available"
+    }
+]

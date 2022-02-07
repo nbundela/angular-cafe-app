@@ -1,0 +1,21 @@
+<div class="container container-space">
+    <div class="row row-cols-3">
+      <div class="col card-space" *ngFor="let item of list">
+            <div class="card" style="width: 18rem;">
+                <img src="{{item.image}}" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.product_name}}</h5>
+                  <p class="card-text">INR {{item.price}}</p>
+                  <a class="btn btn-primary btn-space" (click)="addToCart(item)">Add to cart</a>
+                  <a class="btn btn-warning" data-bs-toggle="offcanvas" 
+                  href="#offcanvasExample" 
+                  role="button" aria-controls="offcanvasExample" (click)="showOffers(item)">
+                    Show offers
+                  </a>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+
+  <app-product-offers [selectedItem]="selectedItem"></app-product-offers>

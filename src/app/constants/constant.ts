@@ -1,0 +1,1 @@
+export const ITEM_LIST = '../../assets/menu.json';

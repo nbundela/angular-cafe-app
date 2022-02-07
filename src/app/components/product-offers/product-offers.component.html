@@ -1,0 +1,38 @@
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offers and Discounts</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" (click)="alertDisplay = 'undefined'"></button>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="alertDisplay === 'added'">
+      Combo {{countNum}} added to the card.
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="alertDisplay === 'removed'">
+      Combo {{countNum}} removed from the card.
+    </div>
+    <div class="offcanvas-body" *ngIf="_selectedItem && products">
+        <div *ngFor="let item of products; let i = index">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header">
+                  Combo offer - {{i+1}} <span>({{item.offer}})</span>
+                </div>
+                <div class="card-body bg-light">
+                  <h5 class="card-title color">{{_selectedItem?.product_name}} and {{item.product_name}}</h5>
+                  <p class="card-text">
+                    <img src="{{_selectedItem?.image}}" alt="{{_selectedItem?.product_name}}"> 
+                    <span class="discountPrice" [ngClass]="{'applied': item.discount !== 'free'}">{{_selectedItem?.price}}</span>
+                    <span class="badge rounded-pill bg-info text-dark offer" *ngIf="item.discount !== 'free'">
+                        {{calculateDiscount(_selectedItem.price,item.discount)}}</span>
+                  </p>
+                  <p>
+                    <img src="{{item.image}}" alt="{{item.product_name}}"> 
+                    <span class="discountPrice applied">{{item.price}}</span>
+                    <span class="badge rounded-pill bg-info text-dark offer">{{item.discount !== 'free' ? calculateDiscount(item.price,item.discount) : 'free'}}</span>
+                  </p>
+                  <a class="btn btn-outline-success btn-space" id="liveToastBtn" (click)="addToCart(_selectedItem, item, i+1)">Add to cart</a>
+                  <a class="btn btn-outline-success" (click)="removeFromCart(_selectedItem.category_name, i+1)">Remove</a>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+

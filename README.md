@@ -14,14 +14,12 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## functionality
+1. Two screens Home and Cart 
+2. All available items in cafe listed down on home screen with 2 buttons addto cart individual items and show offers
+3. click on show offers shows combo, free and discounts.
+4. on Offers screen again 2 button 1 to addtocart other to remove from cart.
+5. If you click any other item on cart then first selected item will removed from cart for same item.
+6. If you other product category then you can add tocart offers but not with same category 2 items.
+7. On cart screen you can see item listed can remove individual item from cart, also reset whole cart and checkout.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
